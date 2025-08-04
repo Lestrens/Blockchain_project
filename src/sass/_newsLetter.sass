@@ -1,0 +1,28 @@
+.newsletter
+    background-color: $dark-color
+    color: white
+    padding: 4rem 2rem
+    &__container
+        max-width: 800px
+        margin: 0 auto
+        text-align: center
+    &__title
+        font-size: 2rem
+        margin-bottom: 1.5rem
+    &__form
+        display: grid
+        grid-template-columns: 1fr auto
+        max-width: 500px
+        margin: 0 auto
+        gap: 1rem
+    &__input
+        padding: 0.8rem 1.2rem
+        border-radius: 50px
+        border: none
+        font-size: 1rem
+        &:focus
+            outline: 2px solid $primary-color
+    &__btn
+        @extend .btn
+        @extend .btn--primary
+        border-radius: 50px
