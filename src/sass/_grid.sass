@@ -1,6 +1,8 @@
-.grid-container
+.grid
     display: grid
-    grid-template-rows: min-content, repeat(9, auto)
-    grid-template-areas: "header" "main-section" "wallets" "icons-works" "collection" "trending" "auction" "influencers" "form" "footer"
-    &__header
-        grid-area: "header"
+    grid-template-rows: repeat(8, 10rem)
+    grid-template-areas: "main" "wallets" "icons-work" "collection" "trend-nft" "auction-nft" "influencers" "form"
+    &__main-section
+        display: grid
+        grid-template-rows: repeat(4, 10rem)
+        

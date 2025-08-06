@@ -1,0 +1,24 @@
+.logo-btn
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__btn-wallet
+        background: $background-color
+        border: none
+        cursor: pointer
+        margin-right: 3rem
+        img
+            transition: all 0.2s ease
+            &:hover
+                transform: translateY(-3px)
+                box-shadow: 0 0 2.5rem rgba(173, 26, 175, 0.4)
+            &:active
+                transform: translateY(0)
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+            &::before,&::after
+                content: ""
+                background: linear-gradient(135deg, #AD1AAF 0%, #AD1AAF 62%, #AD1AAF 100%)
+                z-index: 1
+    &__user
+        width: 4rem
+        height: 4rem
