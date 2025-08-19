@@ -1,6 +1,32 @@
+@use 'variables.sass'
+@use 'mixins.sass'
 .btn
-    background: $background-color
-    margin-right: 4rem
     border: none
+    margin-right: 4rem
+    cursor: pointer
+    &__base
+        background: variables.$background-color
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all 0.2s ease
+        border: none
+        &:hover
+            transform: translateY(-1px)
+            box-shadow: 0 0 2.5rem rgba(173, 26, 175, 0.4)
+        &:active
+            transform: translateY(0)
+            box-shadow: 0 2px 4px rgba(173, 26, 175, 0.4)
+            &::before,&::after
+                content: ""
+                background: linear-gradient(135deg, #AD1AAF 0%, #AD1AAF 62%, #AD1AAF 100%)
+    &__rectangle
+        width: .4rem
+        height: 2.2rem
+        background: variables.$btn-color
     &__main
-        // background: $background-color
+        clip-path: polygon(0 0,100% 0,100% 12%,98% 12%,98% 88%,100% 88%,100% 100%,0 100%,0 89%,2% 88%,2% 12%,0 12%)
+        height: 4.3rem
+        width: 18.8rem
+        background: variables.$btn-color
+    

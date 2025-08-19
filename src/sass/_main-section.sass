@@ -1,36 +1,25 @@
+@use 'variables.sass'
+@use 'mixins.sass'
 .logo-btn
     display: flex
     align-items: center
     justify-content: space-between
     margin-bottom: 14rem
-    &__btn-wallet
-        background: $background-color
-        border: none
-        cursor: pointer
+    &__box-btn-user
+        display: flex
         margin-right: 3rem
-        img
-            transition: all 0.2s ease
-            &:hover
-                transform: translateY(-1px)
-                box-shadow: 0 0 2.5rem rgba(173, 26, 175, 0.4)
-            &:active
-                transform: translateY(0)
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
-            &::before,&::after
-                content: ""
-                background: linear-gradient(135deg, #AD1AAF 0%, #AD1AAF 62%, #AD1AAF 100%)
-                z-index: 1
+        justify-content: space-between
+        align-items: center
     &__user
         width: 4rem
         height: 4rem
-
 .title
-    font: 600 6.4rem $font-family
+    font: 600 6.4rem variables.$font-family
     text-transform: capitalize
-    color: $white
+    color: variables.$white
     margin: 0
     margin-bottom: 4rem
     &__text
-        font: 300 2.5rem $second-family
+        font: 300 2.5rem variables.$second-family
         text-transform: capitalize
-        color: $white
+        color: variables.$white
