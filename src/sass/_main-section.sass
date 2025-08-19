@@ -6,10 +6,7 @@
     justify-content: space-between
     margin-bottom: 14rem
     &__box-btn-user
-        display: flex
-        margin-right: 3rem
-        justify-content: space-between
-        align-items: center
+        @include mixins.flex-center
     &__user
         width: 4rem
         height: 4rem
@@ -23,3 +20,4 @@
         font: 300 2.5rem variables.$second-family
         text-transform: capitalize
         color: variables.$white
+        

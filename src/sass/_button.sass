@@ -1,22 +1,19 @@
 @use 'variables.sass'
 @use 'mixins.sass'
 .btn
+    @include mixins.flex-center
     border: none
     margin-right: 4rem
     cursor: pointer
+    background: variables.$background-color
     &__base
-        background: variables.$background-color
-        display: flex
-        justify-content: center
-        align-items: center
+        @include mixins.flex-center
         transition: all 0.2s ease
         border: none
         &:hover
-            transform: translateY(-1px)
-            box-shadow: 0 0 2.5rem rgba(173, 26, 175, 0.4)
+            transform: translateY(-2px)
         &:active
-            transform: translateY(0)
-            box-shadow: 0 2px 4px rgba(173, 26, 175, 0.4)
+            transform: translateY(0px)
             &::before,&::after
                 content: ""
                 background: linear-gradient(135deg, #AD1AAF 0%, #AD1AAF 62%, #AD1AAF 100%)
@@ -29,4 +26,7 @@
         height: 4.3rem
         width: 18.8rem
         background: variables.$btn-color
-    
+        @include mixins.flex-center
+    &__text
+        color: white
+        font: 500 1.8rem variables.$font-family
